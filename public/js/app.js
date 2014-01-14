@@ -26,6 +26,7 @@ var checkWord = function() {
 var checkLetter = function() {
   if (($.inArray(guess, letters))> -1) {
     $(".guesses").prepend('<li class="green">'+guess+" is correct" +'</li>');
+    $("guess").flash()
     i ++;
   }
   else {
