@@ -24,21 +24,35 @@ var restart = function() {
   var i = 0;
 }
 
+var gameOver = function() {
+  $(".countdown").html('<h4>OVER</h4>');
+    restart();
+}
+
+var gameWon = function() {
+  $(".countdown").html('<h4>WON</h4>');
+  restart();
+}
+
 var checkWord = function() {
   if (myRe.test(guess)) {
-    $(".countdown").html('<h4>WON</h4>');
-    restart();
+    gameWon();
   }
   else {
-    $(".countdown").html('<h4>GAME OVER</h4>');
-    restart();
+    gameOver();
+  }
+}
+
+var checkCountDown = function() {
+  if (countdown === -1) {
+    gameOver();
   }
 }
 
 var countDown = function() {
   $(".countdown").html('<h4>'+countdown + '</h4>');
-  i ++;
-  countdown -=i;
+  countdown--;
+  checkCountDown();
 }
 
 var checkLetter = function() {
@@ -64,6 +78,6 @@ var checkLength = function() {
 }
 
 $(document).ready(function(){
-  $(".countdown").html('<h4>'+countdown + '</h4>');
+  $(".countdown").html('<h4>'+(countdown+1)+ '</h4>');
   submitGuess();
 });
