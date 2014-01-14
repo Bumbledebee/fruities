@@ -14,23 +14,41 @@ var submitGuess = function() {
   });
 };
 
+var restart = function() {
+  $("#guesses").val('');
+  var myArray = ['apple', 'banana', 'pear', 'orange', 'strawberry']
+  var hangmanWord = myArray[Math.floor(Math.random() * myArray.length)];
+  var letters = hangmanWord.split('');
+  var countdown = 8
+  var myRe = new RegExp("(" + hangmanWord + ")");
+  var i = 0;
+}
+
 var checkWord = function() {
   if (myRe.test(guess)) {
-    alert("You won!");
+    $(".countdown").html('<h4>WON</h4>');
+    restart();
   }
   else {
-    alert("Game over");
+    $(".countdown").html('<h4>GAME OVER</h4>');
+    restart();
   }
+}
+
+var countDown = function() {
+  $(".countdown").html('<h4>'+countdown + '</h4>');
+  i ++;
+  countdown -=i;
 }
 
 var checkLetter = function() {
   if (($.inArray(guess, letters))> -1) {
-    $(".guesses").prepend('<li class="green">'+guess+" is correct" +'</li>');
-    $("guess").flash()
-    i ++;
+    $("#guesses").prepend('<li class="green">'+guess+" is correct" +'</li>');
+    countDown();
   }
   else {
-    $(".guesses").prepend('<li class="red">'+guess+" is not correct" +'</li>');
+    $("#guesses").prepend('<li class="red">'+guess+" is not correct" +'</li>');
+    countDown();
   };
 }
 
@@ -46,5 +64,6 @@ var checkLength = function() {
 }
 
 $(document).ready(function(){
+  $(".countdown").html('<h4>'+countdown + '</h4>');
   submitGuess();
 });

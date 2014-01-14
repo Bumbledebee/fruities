@@ -9,16 +9,12 @@
 <body>
   <div class="top input wrapper">
     <h1 >Hangman Game</h1>
-    <h5> Enter a letter and hit Enter.</h5>
+    <h5> Enter a lowercase letter and hit Enter. You may also try guessing the whole word. Guess the fruit. </h5>
     <input type="text" placeholder"Your guess" id="guess" type="letter"/>
-    <div class="button-one">
-      <h4>8</h4>
-    </div>
-  </div>
-  <div class="wrapper">
-    <ul> Your guesses:</ul>
-    <ul class="guesses wrapper"></ul>
-  </div>
+    <ul class="countdown wrapper">
+    </ul>
+    <ul class="wrapper"> Your guesses:</ul>
+    <ul class="wrapper" id="guesses"></ul>
   <script src="js/jquery-1.10.2.js"></script>
   <script src="js/app.js"></script>
 </body>

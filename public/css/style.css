@@ -14,7 +14,6 @@ ul {
 input {
   font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace, sans-serif;
   font-size: 1.1em;
-  margin-left: 5px;
   padding-left: 2px;
   padding-right: 3px;
 }
@@ -27,15 +26,22 @@ title {
 h4 {
   font-size: 5em;
   vertical-align: middle;
-  text-align: left;
-  margin: 0;
-  margin-left: 1.6em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 li {
   margin-left: 20px;
   padding: 0px;
   height: 8p;
+}
+
+.countdown {
+  font-size: 22;
+  background-color: yellow;
 }
 
 .red {
@@ -53,44 +59,13 @@ li {
 }
 
 #guess {
-  width: 280px;
-  height: 30px;xs
+  width: 300px;
+  height: 30px;
 }
 
 .input {
   margin-bottom: 30px;
 }
 
-.button-one {
-  margin-top: 30px;
-  display: block;
-  height: 100px;
-  width: 300px;
-  background: yellow;
-  border: 2px solid rgba(33, 68, 72, 0.59);
-  color: rgba(0, 0, 0, 0.55);
-  text-align: center;
-  vertical-align: middle;
-  line-height: 600%;
-  font: bold;
-  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace, sans-serif;
-}
-
-a.button-one {
-  text-decoration: none;
-}
-
-a:hover {
-  background-color: grey;
-  color: white;
-}
-
-a:active {
-  color:#f00;
-}
-
-a:focus {
-  color:#f00;
-}
 
 
