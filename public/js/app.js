@@ -3,6 +3,7 @@ var hangmanWord = myArray[Math.floor(Math.random() * myArray.length)];
 var letters = hangmanWord.split('');
 var countdown = 8
 var myRe = new RegExp("(" + hangmanWord + ")");
+var i = 0;
 
 var submitGuess = function() {
   console.log(hangmanWord);
@@ -24,17 +25,17 @@ var checkWord = function() {
 
 var checkLetter = function() {
   if (($.inArray(guess, letters))> -1) {
-    alert("good letter");
+    $(".guesses").append('<li>'+guess+" is correct" +'</li>');
+    i ++;
   }
   else {
-    alert("bad letter");
+    $(".guesses").append('<li>'+guess+" is not correct" +'</li>');
   };
 }
 
 var checkLength = function() {
   guess = $('#guess').val();
-  console.log(guess);
-  console.log(myRe);
+  $("#guess").val('');
   if (guess.length > 1) {
     checkWord();
   }

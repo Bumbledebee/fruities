@@ -27,6 +27,11 @@ h4 {
   margin-left: 1.6em;
 }
 
+li {
+  margin: 0;
+  padding: 0;
+  height: 8p;
+}
 
 .wrapper, h5{
   max-width: 300px;
