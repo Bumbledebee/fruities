@@ -25,11 +25,11 @@ var checkWord = function() {
 
 var checkLetter = function() {
   if (($.inArray(guess, letters))> -1) {
-    $(".guesses").append('<li>'+guess+" is correct" +'</li>');
+    $(".guesses").prepend('<li class="green">'+guess+" is correct" +'</li>');
     i ++;
   }
   else {
-    $(".guesses").append('<li>'+guess+" is not correct" +'</li>');
+    $(".guesses").prepend('<li class="red">'+guess+" is not correct" +'</li>');
   };
 }
 

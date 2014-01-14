@@ -6,6 +6,11 @@ body {
   font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
 
+ul {
+  text-align: left;
+  padding-left: 0;
+}
+
 input {
   font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace, sans-serif;
   font-size: 1.1em;
@@ -32,6 +37,13 @@ li {
   padding: 0;
   height: 8p;
 }
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
 
 .wrapper, h5{
   max-width: 300px;
@@ -49,6 +61,7 @@ li {
 }
 
 .button-one {
+  margin-top: 30px;
   display: block;
   height: 100px;
   width: 300px;
