@@ -14,8 +14,8 @@ ul {
 input {
   font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace, sans-serif;
   font-size: 1.1em;
-  padding-left: 2px;
-  padding-right: 3px;
+  padding-left: 2.5px;
+  padding-right: 2.5px;
 }
 
 title {
@@ -31,6 +31,7 @@ h4 {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
+  color: black;
 }
 
 li {
@@ -56,15 +57,20 @@ li {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 
 #guess {
-  width: 300px;
+  width: 295px;
   height: 30px;
 }
 
 .input {
   margin-bottom: 30px;
+}
+
+#guesses {
+  background-color: white;
 }
 
 
