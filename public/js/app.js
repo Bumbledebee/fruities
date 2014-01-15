@@ -15,13 +15,13 @@ var submitGuess = function() {
 };
 
 var restart = function() {
-  $("#guesses").val('');
-  var myArray = ['apple', 'banana', 'pear', 'orange', 'strawberry']
-  var hangmanWord = myArray[Math.floor(Math.random() * myArray.length)];
-  var letters = hangmanWord.split('');
-  var countdown = 8
-  var myRe = new RegExp("(" + hangmanWord + ")");
-  var i = 0;
+  $("#guesses").empty();
+  myArray = ['apple', 'banana', 'pear', 'orange', 'strawberry']
+  hangmanWord = myArray[Math.floor(Math.random() * myArray.length)];
+  letters = hangmanWord.split('');
+  countdown = 8
+  myRe = new RegExp("(" + hangmanWord + ")");
+  i = 0;
 }
 
 var gameOver = function() {
